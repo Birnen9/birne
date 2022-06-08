@@ -1,0 +1,38 @@
+.header {
+  width: 100vw;
+  position: relative;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  .container {
+    width: 80%;
+    height: 100%;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .author {
+      width: 8vw;
+      height: 8vw;
+      border-radius: 50%;
+    }
+    .rotate:hover {
+      cursor: pointer;
+      animation: myRotate 3s linear infinite;
+    }
+    @keyframes myRotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @media (max-width: 900px) {
+      /*如果媒体满足0-800 之间,那么会应用这里面的样式*/
+      .rotate {
+        width: 15vw;
+        height: 15vw;
+        animation: myRotate 3s linear infinite;
+      }
+    }
+  }
+}

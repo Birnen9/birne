@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-
+import * as React from "react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import '../styles/page.scss'
 const IndexPage = () => {
   return (
-    <main>
-      <title>Home Page</title>
-      <h1>Welcome to 詹毅的网站 !</h1>
-      <Link to="/about">来吧</Link>
-      <p>才开始做的网站</p>
+    <main className='main'>
+        <Header></Header>
+        <main className='middleMain'>中间内容</main>
+        <Footer></Footer>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
